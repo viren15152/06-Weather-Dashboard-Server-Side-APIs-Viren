@@ -6,6 +6,7 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/open-weather/2.0.0/openweather.min.js"></script>
 </head>
 <body>
     <section class="hero">
@@ -30,10 +31,85 @@
                             Obtain Weather
                         </button>
                     </form>
+                    <!--This section is will be the list of previous searches-->
+                    <div class="box table-box">
+                        <div class="table-container">
+                            <table id="cityList" class="table is-bordered">
+                                <tr></tr> 
+                            </table>
+                            <button id="reset-btn" class="button is-danger">RESET</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div id="weather-data" class="columns box content">
+                        <div class="column current-city-data">
+                            <h2 id="city-name"></h2>
+                            <h3 id="temp"></h3>
+                            <h3 id="high"></h3>
+                            <h3 id="humidity"></h3>
+                            <h3 id="wind-speed"></h3>
+                            <h3 id="uv-index"></h3>
+                            <h3 id="city-cond"></h3>
+                        </div>
+                        <div class="column">
+                            <div id="icon"></div>
+                        </div>
+                    </div>
+
+                    <!-- This section includes the cards for the 5 day forecast-->
+                    <div class="container">
+                      <div class="content">
+                        <h2>5 Day Forecast:</h2>
+                        <div id="day1" class="card-content">
+                            <h3 id="date1" class="has-text-black"></h3>
+                            <div id="icon1"></div>
+                            <h4 id="temp1" class="has-text-black"></h4>
+                            <h4 id="hum1" class="has-text-black"></h4>
+                        </div>
+                      </div>
+                      <div class="column card">
+                        <div id="day2" class="card-content">
+                            <h3 id="date2" class="hast-text-black"></h3>
+                            <div id="icon2"></div>
+                            <h4 id="temp2" class="has-text-black"></h4>
+                            <h4 id="hum2" class="has-text-black"></h4>
+                        </div>
+                      </div>
+                      <div class="column card">
+                        <div id="day3" class="card-content">
+                            <h3 id="date3" class="has-text-black"></h3>
+                            <div id="icon3"></div>
+                            <h4 id="temp3" class="has-text-black"></h4>
+                            <h4 id="hum3" class="has-text-black"></h4>
+                        </div>
+                      </div>
+                      <div class="column card">
+                        <div id="day4" class="card-content">
+                            <h3 id="date4" class="card-content"></h3>
+                            <div id="icon4"></div>
+                            <h4 id="temp4" class="has-text-black"></h4>
+                            <h4 id="hum4" class="has-text-black"></h4>
+                        </div>
+                      </div>
+                      <div class="column card">
+                        <div id="day5" class="card-content">
+                            <h3 id="date5" class="card-content"></h3>
+                            <div id="icon5"></div>
+                            <h4 id="temp5" class="has-text-black"></h4>
+                            <h4 id="hum5" class="has-text-black"></h4>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!--Script elements-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/open-weather/2.0.0/openweather.min.js"></script>
+    <script src="assets/script.js"></script>
     
 </body>
 </html>
