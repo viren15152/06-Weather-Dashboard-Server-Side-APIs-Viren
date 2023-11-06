@@ -1,0 +1,35 @@
+
+#info-section {
+    padding-top: 20px
+}
+
+#weather-data {
+    background-color: #fffafa;
+}
+
+.current-city-data {
+    min-height: 300px;
+    background-color: skyblue;
+}
+
+.table-box {
+    background-color: #fffafa;
+}
+
+tr {
+    margin: 5px;
+}
+
+.card {
+    background-color: #a5b1c2;
+    margin: 3px;
+    min-height: 300px;
+}
+
+.hero {
+    background-color: snow;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+
