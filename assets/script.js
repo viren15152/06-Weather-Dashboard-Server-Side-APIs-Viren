@@ -1,16 +1,16 @@
 $(document).ready(function () {
     
-    //This section allows me to retrieve the current date this will make it simple to parse, validate and maniuplate and display date/time
+    //This section allows me to retrieve the current date this will make it simple to parse, validate and maniuplate and display date/time.
     let nowMoment = moment().format("l");
 
-    //This will allow me to add days to moment for the forecast cards(let declartion declares re-assignable, block scoped local variables)
+    //This will allow me to add days to moment for the forecast cards(let declartion declares re-assignable, block scoped local variables).
     let day1 = moment().add(1, "days").format("l");
     let day2 = moment().add(2, "days").format("l");
     let day3 = moment().add(3, "days").format("l");
     let day4 = moment().add(4, "days").format("l");
     let day5 = moment().add(5, "days").format("l");
 
-    //Global variable(These are declared outside of the the function in a program and can, therefore be accessed by any of the functions)
+    //Global variable(These are declared outside of the the function in a program and can, therefore be accessed by any of the functions).
     let city;
     let cities;
 
@@ -28,7 +28,7 @@ $(document).ready(function () {
 
     loadMostRecent()
 
-    //I have created this function so that it will load recently searched cities from local storage
+    //I have created this function so that it will load recently searched cities from local storage.
 
     function loadRecentCities() {
         let loadRecentCities = JOSN.parse(localStorage.getItem("cities"));  
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     loadRecentCities()
 
-    //I have included an event handler for the search city button
+    //I have included an event handler for the search city button.
     $("#submit").on("click", (e) => {
         e.preventDefault();
         getCity();
@@ -51,5 +51,23 @@ $(document).ready(function () {
         listCities();
 });
 
+//This function will allow me to save searched cities to local storage. 
+
+function saveToLocalStorage() {
+    localStorage.setItem("mostRecent", city);
+    cities.push(city);
+    localStorage.setItem("cities", JSON.stringify(cities));
+}
+
+//This function will allow me to retrieve user input e.g. The City name 
+function getCity() {
+    city = $("city-input").val();
+    if (city && cities.includes(city) === false) {
+        saveToLocalStorage();
+        return city;
+    } else if (!city) {
+      alert("Please enter a valid city name");
+    }
+}
 
 
