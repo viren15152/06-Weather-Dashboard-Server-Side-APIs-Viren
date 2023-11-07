@@ -1,6 +1,6 @@
 $(document).ready(function () {
     
-    //Allows me to retrieve the current date this will make it simple to parse, validate and maniuplate and display date/time
+    //This section allows me to retrieve the current date this will make it simple to parse, validate and maniuplate and display date/time
     let nowMoment = moment().format("l");
 
     //This will allow me to add days to moment for the forecast cards(let declartion declares re-assignable, block scoped local variables)
@@ -14,7 +14,7 @@ $(document).ready(function () {
     let city;
     let cities;
 
-    //The function below will allow me to load the latest searched city from local storage.
+    //The function below will allow me to load the most recently searched city from local storage.
     function loadMostRecent() {
         let lastSearch = localStorage.getItem("most recent");
         if (lastSearch) {
@@ -26,6 +26,8 @@ $(document).ready(function () {
         }
     }
 });
+
+
 
 
    
