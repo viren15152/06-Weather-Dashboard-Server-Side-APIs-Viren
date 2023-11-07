@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <!--Used Bulma CSS framework as an alternative to Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
@@ -13,7 +14,6 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">Weather Dashboard</h1>
-                <img src="">
             </div>
         </div>
     </section>
@@ -27,7 +27,8 @@
                         <input id="city-input" class="input is-info"
                         type="text"
                         placeholder="Please enter the name of the city"/>
-                        <button id="submit" class="button is-info" type="submit">Search
+                        <br>
+                        <button id="submit" class="button is-info is hover" type="submit">Search
                         </button>
                     </form>
                     <!--This section is will be the list of previous searches-->
@@ -36,7 +37,7 @@
                             <table id="cityList" class="table is-bordered">
                                 <tr></tr> 
                             </table>
-                            <button id="reset-btn" class="button is-danger">RESET/CLEAR</button>
+                            <button id="reset-btn" class="button is-danger is-rounded">RESET/CLEAR</button>
                         </div>
                     </div>
                 </div>
@@ -70,7 +71,7 @@
                       </div>
                       <div class="column card">
                         <div id="day2" class="card-content">
-                            <h3 id="date2" class="hast-text-black"></h3>
+                            <h3 id="date2" class="has-text-black"></h3>
                             <div id="icon2"></div>
                             <h4 id="temp2" class="has-text-black"></h4>
                             <h4 id="hum2" class="has-text-black"></h4>

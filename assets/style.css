@@ -13,7 +13,7 @@
 }
 
 .table-box {
-    background-color: #fffafa;
+    background-color: snow;
 }
 
 tr {
@@ -22,7 +22,7 @@ tr {
 
 .card {
     display: inline-block;
-    background-color: #a5b1c2;
+    background-color: #D3D3D3;
     width: 300px;
     height: 150px;
     margin: 3px;
@@ -41,7 +41,7 @@ tr {
 
 #submit {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .column {

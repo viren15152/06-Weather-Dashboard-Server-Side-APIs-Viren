@@ -25,10 +25,31 @@ $(document).ready(function () {
             search();
         }
     }
+
+    loadMostRecent()
+
+    //I have created this function so that it will load recently searched cities from local storage
+
+    function loadRecentCities() {
+        let loadRecentCities = JOSN.parse(localStorage.getItem("cities"));  
+
+        if (loadRecentCities) {
+            cities = recentCities;
+        } else {
+            cities = [];
+        }
+    }
+
+    loadRecentCities()
+
+    //I have included an event handler for the search city button
+    $("#submit").on("click", (e) => {
+        e.preventDefault();
+        getCity();
+        search();
+        $("#city-input").val("");
+        listCities();
 });
 
 
-
-
-   
 
