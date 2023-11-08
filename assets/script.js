@@ -191,12 +191,12 @@ function listCities() {
 }
 
 //This is an event handler for recently searched cities in my table 
-listCities();
 $(document).on("click", "td", (e) => {
     e.preventDefault();
     let listedCity = $(e.target).text();
     city = listedCity;
     search();
+
 });
 
 //My final section of code in my script.js is an event handler for my clear/reset button in my HTML

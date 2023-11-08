@@ -1,6 +1,8 @@
 
 #info-section {
+    margin-top: 20px;
     padding-top: 20px
+    
 }
 
 #weather-data {
@@ -13,7 +15,7 @@
 }
 
 .table-box {
-    background-color: snow;
+    background-color: #D3D3D3;
 }
 
 tr {
@@ -23,14 +25,13 @@ tr {
 .card {
     display: inline-block;
     background-color: #D3D3D3;
-    width: 300px;
-    height: 150px;
     margin: 3px;
-    text-align: center;
+    min-height: 300px;
 }
 
 .hero {
-    background-color: white;
+    margin-bottom: 20px;
+    background-color: snow;
     font-family: Arial, Helvetica, sans-serif
 }
 
@@ -41,7 +42,7 @@ tr {
 
 #submit {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .column {
