@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <!--Used Bulma CSS framework as an alternative to Bootstrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
     <link rel="stylesheet" href="assets/style.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 </head>
+
 <body>
     <section class="hero">
         <div class="hero-body">
@@ -36,8 +37,9 @@
                         <div class="table-container">
                             <table id="cityList" class="table is-bordered">
                                 <tr></tr> 
+                                <!--I have generated the table in my JavaScript-->
                             </table>
-                            <button id="reset-btn" class="button is-danger is-rounded">RESET/CLEAR</button>
+                            <button id="clr-btn" class="button is-danger is-rounded">CLEAR</button>
                         </div>
                     </div>
                 </div>

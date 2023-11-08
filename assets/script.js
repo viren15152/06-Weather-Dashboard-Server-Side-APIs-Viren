@@ -107,7 +107,6 @@ function search() {
 
         getUV(response.coord.lat, response.coord.lon);
     }).fail(function(){
-        console.log(err, "err");
         alert("Could not obtain data")
     });
 
