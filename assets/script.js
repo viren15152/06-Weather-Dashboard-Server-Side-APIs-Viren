@@ -34,7 +34,7 @@ $(document).ready(function () {
         let loadRecentCities = JSON.parse(localStorage.getItem("cities"));  
 
         if (loadRecentCities) {
-            cities = recentCities;
+            cities = loadRecentCities;
         } else {
             cities = [];
         }
@@ -61,7 +61,7 @@ function saveToLocalStorage() {
 
 //This function will allow me to retrieve user input e.g. The City name 
 function getCity() {
-    city = $("city-input").val();
+    city = $("#city-input").val();
     if (city && cities.includes(city) === false) {
         saveToLocalStorage();
         return city;
@@ -94,7 +94,7 @@ function search() {
         $("#icon").html(
             `<img src="http://openweathermap.org/img/wn/${icon}@2x.png">`
         );
-        $("#city-name").html(cityName + " " + "(" + NowMoment + ")");
+        $("#city-name").html(cityName + " " + "(" + nowMoment + ")");
         $("#city-cond").text("Current Conditions: " + cityCond);    
         $("#temp").text("Current Temp (F): " + cityTemp.toFixed(1));
         $("#humidity").text("Humidity: " + cityHum + "%");
@@ -106,7 +106,8 @@ function search() {
         $("#date5").text(day5);
 
         getUV(response.coord.lat, response.coord.lon);
-    }).fail(function(){
+    }).fail(function (err) {
+        console.error("Error", err);
         alert("Could not obtain data")
     });
 
