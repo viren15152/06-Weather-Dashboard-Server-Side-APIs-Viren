@@ -73,7 +73,7 @@ function getCity() {
 //This function will allow me to search the API for the chosen City
 function search() {
 
-    let queryURL = "https://api.openweathermap.org/data/2.5/weather?=" + city + "&units=imperial&appid=";
+    let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=618e6c039d4af2e9290a98da5ec21d47";
     let coords = [];
 
     $.ajax({
@@ -81,10 +81,12 @@ function search() {
         method: "GET",
     }).then(function (response) {
 
+        console.log(response.coord.lat, "lat -- lon", response.coord.lon)
+
         coords.push(response.coord.lat);
         coords.push(response.coord.lon);
         let cityName = response.name;
-        let cityCond = response.weath[0].description.toUpperCase();
+        let cityCond = response.weather[0].description.toUpperCase();
         let cityTemp = response.main.temp;
         let cityHum = response.main.humidity;
         let cityWind = response.wind.speed;
@@ -105,6 +107,7 @@ function search() {
 
         getUV(response.coord.lat, response.coord.lon);
     }).fail(function(){
+        console.log(err, "err")
         alert("Could not obtain data")
     });
 
@@ -112,10 +115,10 @@ function search() {
 
 
         $.ajax({
-            url: "https://api.openweathermap.org/data/3.0/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly" + "&units=imperial&appid=",
+            url: "https://api.openweathermap.org/data/3.0/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly" + "&units=imperial&appid=618e6c039d4af2e9290a98da5ec21d47",
             method: "GET",
         }).then(function (response) {
-
+            
             let uvIndex = response.current.uvi;
             $("#uv-index").text("UV Index:" + " " + uvIndex);
             if (uvIndex >= 8) {
@@ -178,7 +181,7 @@ function search() {
     }
 }
 
-//This function will allow me to render recently searched cities to my page at
+//This function will allow me to render recently searched cities to my page 
 
 function listCities() {
     $("#cityList").text("");
