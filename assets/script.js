@@ -81,7 +81,7 @@ function search() {
         method: "GET",
     }).then(function (response) {
 
-        console.log(response.coord.lat, "lat -- lon", response.coord.lon)
+        console.log(response.coord.lat, "lat -- lon", response.coord.lon);
 
         coords.push(response.coord.lat);
         coords.push(response.coord.lon);
@@ -107,7 +107,7 @@ function search() {
 
         getUV(response.coord.lat, response.coord.lon);
     }).fail(function(){
-        console.log(err, "err")
+        console.log(err, "err");
         alert("Could not obtain data")
     });
 
