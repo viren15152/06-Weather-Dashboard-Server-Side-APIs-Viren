@@ -9,9 +9,9 @@ Screenshot:![Weather Dashboard](<Screenshot 2023-11-09 at 00.54.00.png>)
 
 ## Technology Used:
 HTML5
-CSS3
-JavaScript
+CSS: Bulma CSS Framework
 jQuery
+moment.js
 Open Weather Web API
 Visual Studio Code
 
