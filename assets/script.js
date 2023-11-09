@@ -81,7 +81,7 @@ function search() {
         method: "GET",
     }).then(function (response) {
 
-        console.log(response.coord.lat, "lat -- lon", response.coord.lon);
+        //console.log(response.coord.lat, "lat -- lon", response.coord.lon);
 
         coords.push(response.coord.lat);
         coords.push(response.coord.lon);
@@ -98,7 +98,7 @@ function search() {
         $("#city-cond").text("Current Conditions: " + cityCond);    
         $("#temp").text("Current Temp (F): " + cityTemp.toFixed(1));
         $("#humidity").text("Humidity: " + cityHum + "%");
-        $("wind-speed").text("Wind Speed: " + cityWind + "mph");
+        $("#wind-speed").text("Wind Speed: " + cityWind + "mph");
         $("#date1").text(day1);
         $("#date2").text(day2);
         $("#date3").text(day3);
@@ -107,7 +107,7 @@ function search() {
 
         getUV(response.coord.lat, response.coord.lon);
     }).fail(function (err) {
-        console.error("Error", err);
+        //console.error("Error", err);
         alert("Could not obtain data")
     });
 
@@ -115,7 +115,7 @@ function search() {
 
 
         $.ajax({
-            url: "https://api.openweathermap.org/data/3.0/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly" + "&units=imperial&appid=618e6c039d4af2e9290a98da5ec21d47",
+            url: "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly" + "&units=imperial&appid=618e6c039d4af2e9290a98da5ec21d47",
             method: "GET",
         }).then(function (response) {
             

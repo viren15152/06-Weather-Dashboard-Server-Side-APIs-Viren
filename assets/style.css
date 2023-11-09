@@ -5,6 +5,11 @@
     
 }
 
+h2.forecast-header {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
 #weather-data {
     background-color: skyblue;
 }
@@ -24,9 +29,9 @@ tr {
 
 .card {
     display: inline-block;
+    width: 18%;
+    margin: 0 10px;
     background-color: #D3D3D3;
-    margin: 3px;
-    min-height: 300px;
 }
 
 .hero {

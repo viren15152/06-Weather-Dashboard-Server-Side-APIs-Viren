@@ -2,10 +2,10 @@
 
 ## Description:
 
-The aim for this web application is was to create a weather dashboard that will present the user with todays current weather data and then a 5 day forecast for the proceeding dates. It also allows users to store past search results and use them in the future. 
+The aim for this web application was to create a weather dashboard that will present the user with todays current weather data and then a 5 day forecast for the proceeding dates. It also allows the user to store past search results and use them in the future. 
 
 ## Visuals:
-Screenshot:
+Screenshot:![Weather Dashboard](<Screenshot 2023-11-09 at 00.54.00.png>)
 
 ## Technology Used:
 HTML5
@@ -16,9 +16,10 @@ Open Weather Web API
 Visual Studio Code
 
 ## Installation: 
-Clone my Github repository and open in browser.
+Clone my Github repository and open in browser, or access via deployed link. 
 
-## Usage:
+## Usage: 
+Open the weather dashboard in your default browser and simply enter the city name. You will be provided with the current days weather data and a forecast for the next 5 days. Previous searches will be saved in local storage and the user can access those once again. 
 
 
 ## Support:
@@ -31,10 +32,8 @@ to discuss what you would like to change.
 ## Deployed Link:
 
 
-
-
 ## Author:
-Viren Lala (We were given starter code)
+Viren Lala 
 
 ## License:
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
